@@ -22,7 +22,7 @@ jobs:
         run: dotnet build
               --configuration Release
       - name: Test with dotnet
-        run: dotnet test Telepathy.Tests\Telepathy.Tests.csproj --logger:nunit
+        run: dotnet test Telepathy.Tests\Telepathy.Tests.csproj
       - name: Run load test for one minute
         shell: cmd
         run: |
