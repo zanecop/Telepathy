@@ -285,7 +285,8 @@ namespace Telepathy.Tests
             // connect a client
             Client client = new Client(MaxMessageSize);
             //client.Connect("::ffff:127.0.0.1", port);
-            client.Connect("::1", port);
+            //client.Connect("::1", port);
+            client.Connect("0:0:0:0:0:0:0:1", port);
 
             // get server's connect message
             Message serverConnectMsg = NextMessage(server);
