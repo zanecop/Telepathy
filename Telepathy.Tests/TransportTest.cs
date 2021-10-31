@@ -82,6 +82,8 @@ namespace Telepathy.Tests
         [Test]
         public void SpamSendTest()
         {
+            Thread.Sleep(2000);
+            
             // BeginSend can't be called again after previous one finished. try
             // to trigger that case.
             Client client = new Client(MaxMessageSize);
