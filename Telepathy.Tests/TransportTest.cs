@@ -77,6 +77,7 @@ namespace Telepathy.Tests
             Client client = new Client(MaxMessageSize);
             for (int i = 0; i < 1000; i++)
             {
+                Thread.Sleep(10);
                 client.Connect("127.0.0.1", port);
                 Assert.That(client.Connecting || client.Connected, Is.True);
                 client.Disconnect();
