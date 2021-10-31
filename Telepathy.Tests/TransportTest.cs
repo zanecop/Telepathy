@@ -24,7 +24,7 @@ namespace Telepathy.Tests
     public class TransportTest
     {
         // just a random port that will hopefully not be taken
-        const int port = 9587;
+        const int port = 6565;
         const int MaxMessageSize = 16 * 1024;
 
         Server server;
@@ -284,7 +284,8 @@ namespace Telepathy.Tests
         {
             // connect a client
             Client client = new Client(MaxMessageSize);
-            client.Connect("::ffff:127.0.0.1", port);
+            //client.Connect("::ffff:127.0.0.1", port);
+            client.Connect("::1", port);
 
             // get server's connect message
             Message serverConnectMsg = NextMessage(server);
