@@ -24,7 +24,7 @@ namespace Telepathy.Tests
     public class TransportTest
     {
         // just a random port that will hopefully not be taken
-        const int port = 6565;
+        const int port = 7575;
         const int MaxMessageSize = 16 * 1024;
 
         Server server;
